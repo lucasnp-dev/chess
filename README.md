@@ -1,3 +1,5 @@
+## Status: developing
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The idea of this repository is to have some necessary tools configured for a nextJS project.
 
 ## Current Tools
