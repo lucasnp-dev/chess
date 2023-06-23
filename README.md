@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Current Tools
 
-- Next Auth
+- Next Auth with JWT Authentication
 - Prisma IO
 - Tailwind CSS
 - ESLint
