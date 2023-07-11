@@ -29,6 +29,7 @@ export default function App() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
+            <p>Login</p>
             <input
                 type="text"
                 {...register('name')}
