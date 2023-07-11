@@ -8,6 +8,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Prisma IO
 - Tailwind CSS
 - ESLint
+- React Hook Form
+- Zod
 
 ## Installation
 
