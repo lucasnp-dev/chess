@@ -29,7 +29,7 @@ export default function App() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <p>Login</p>
+            <p>Login1</p>
             <input
                 type="text"
                 {...register('name')}
