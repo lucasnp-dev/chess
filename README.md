@@ -10,6 +10,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - ESLint
 - React Hook Form
 - Zod
+- Shadcn/UI
 
 ## Installation
 
