@@ -1,51 +1,33 @@
-'use client'
-
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
-
-const formSchema = z.object({
-    name: z
-        .string()
-        .nonempty('Nome não pode ser vazio')
-        .min(3, 'Mínimo 3 caracteres'),
-    idade: z.string(),
-})
-
-type Inputs = z.infer<typeof formSchema>
+import { Button } from '@/components/ui/button'
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card'
+import FormLogin from '@/features/form-login'
+import { ModeToggle } from '@/features/mode-toggle'
 
 export default function App() {
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm<Inputs>({
-        resolver: zodResolver(formSchema),
-    })
-
-    const onSubmit = (data: Inputs) => {
-        console.log(data)
-    }
-
-    return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <p>Login1</p>
-            <input
-                type="text"
-                {...register('name')}
-                className="border border-zinc-950 p-4"
-            />
-            {errors.name && (
-                <span className="text-red-400">{errors.name.message}</span>
-            )}
-
-            <input
-                type="string"
-                {...register('idade')}
-                className="border border-zinc-950"
-            />
-
-            <input type="submit" />
-        </form>
-    )
+  return (
+    <div className="w-screen h-screen flex justify-center items-center relative">
+      <Card className="w-[350px]">
+        <CardHeader>
+          <CardTitle>Login</CardTitle>
+          <CardDescription>Sign in for a better experience</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <FormLogin />
+        </CardContent>
+        <CardFooter className="flex justify-end items-center">
+          <Button type="submit" form="login">
+            Sign In
+          </Button>
+        </CardFooter>
+      </Card>
+      <ModeToggle className="absolute bottom-4 right-4" />
+    </div>
+  )
 }
