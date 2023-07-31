@@ -15,5 +15,5 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Installation
 
 ```bash
-npx create-next-app@latest --example https://github.com/lucasnp-dev/next-master-repo next-master-repo
+npx create-next-app@latest --example https://github.com/lucasnp-dev/chess chess
 ```
