@@ -24,7 +24,7 @@ export default function MobileMenu() {
             <LuMenu size={24} />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
+        <DropdownMenuContent className="mr-1">
           <DropdownMenuLabel>Go to</DropdownMenuLabel>
           <DropdownMenuSeparator />
           {marketingConfig.mainNav.map((item) => (
