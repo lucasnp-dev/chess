@@ -7,7 +7,7 @@ import MobileMenu from './mobile-menu'
 
 export default function Menu() {
   return (
-    <header className="p-4 border-b">
+    <header className="py-4 px-4 border-b">
       <div className="flex items-center max-w-screen-2xl m-auto px-4 justify-between">
         <div className="pr-8">
           <div className="flex gap-2 items-center">
@@ -17,7 +17,6 @@ export default function Menu() {
         </div>
         <Navbar className="flex-1 max-lg:hidden" />
         <div className="flex gap-4">
-          <MobileMenu />
           <ModeToggle variant={'ghost'} />
           <Link
             className={buttonVariants({
@@ -28,6 +27,7 @@ export default function Menu() {
           >
             Login
           </Link>
+          <MobileMenu />
         </div>
       </div>
     </header>

@@ -1,4 +1,7 @@
 type MarketingConfig = {
+  page: {
+    title: string
+  }
   mainNav: {
     title: string
     href: string
@@ -24,4 +27,7 @@ export const marketingConfig: MarketingConfig = {
       href: '/docs',
     },
   ],
+  page: {
+    title: 'An excellent chess opening to start a new project.',
+  },
 }
