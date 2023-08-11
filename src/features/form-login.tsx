@@ -13,6 +13,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { FcGoogle } from 'react-icons/fc'
+import { MdEmail } from 'react-icons/md'
 import { Fragment } from 'react'
 import { Button } from '@/components/ui/button'
 import { signIn } from 'next-auth/react'
@@ -50,24 +51,30 @@ export default function FormLogin() {
             name="username"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Username</FormLabel>
+                <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="lucas" {...field} />
+                  <Input placeholder="email@example.com" {...field} />
                 </FormControl>
-                <FormDescription>
-                  This is your public display name.
-                </FormDescription>
+                <FormDescription>This is your email.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
           />
         </form>
       </Form>
-      <div className="mt-4">
+      <div className="mt-4 space-y-4">
+        <Button
+          variant="default"
+          className="gap-4 w-full"
+          onClick={() => signIn()}
+        >
+          <MdEmail />
+          Sign in with email
+        </Button>
         <Button
           variant="outline"
           className="gap-4 w-full"
-          onClick={() => signIn()}
+          onClick={() => signIn('google')}
         >
           <FcGoogle />
           Continue with Google

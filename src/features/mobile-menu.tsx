@@ -12,10 +12,10 @@ import {
 
 import { LuMenu } from 'react-icons/lu'
 
-import { marketingConfig } from '@/config/marketing'
 import Link from '@/components/Link'
+import { MainNavType } from '@/@types'
 
-export default function MobileMenu() {
+export default function MobileMenu({ navItems }: { navItems: MainNavType }) {
   return (
     <div className="lg:hidden">
       <DropdownMenu>
@@ -27,7 +27,7 @@ export default function MobileMenu() {
         <DropdownMenuContent className="mr-1">
           <DropdownMenuLabel>Go to</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          {marketingConfig.mainNav.map((item) => (
+          {navItems.map((item) => (
             <DropdownMenuItem key={`mobilemenu_${item.title}`}>
               <Link href={item.href}>{item.title}</Link>
             </DropdownMenuItem>

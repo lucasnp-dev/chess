@@ -1,6 +1,5 @@
 import Container from '@/components/Container'
 import { buttonVariants } from '@/components/ui/button'
-import Menu from '@/features/menu'
 import Link from 'next/link'
 import { Fragment } from 'react'
 
@@ -8,13 +7,10 @@ import { marketingConfig } from '@/config/marketing'
 import { Card, CardContent } from '@/components/ui/card'
 import { FaReact } from 'react-icons/fa'
 import { SiNextdotjs, SiPlanetscale } from 'react-icons/si'
-import Logo from '@/components/Logo'
 
 export default function App() {
   return (
     <Fragment>
-      <Menu />
-
       <Container className="pb-16 lg:pb-32 px-4">
         <div className="text-center max-w-[64rem] m-auto flex flex-col gap-4 items-center">
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
@@ -43,7 +39,7 @@ export default function App() {
         </div>
       </Container>
 
-      <div className="bg-slate-50 dark:bg-zinc-900 py-16 lg:py-32 px-4">
+      <div className="bg-slate-50 dark:bg-zinc-950 py-16 lg:py-32 px-4">
         <Container>
           <div className="max-w-[64rem] m-auto flex flex-col gap-8 items-center">
             <h2
@@ -89,15 +85,6 @@ export default function App() {
           </div>
         </Container>
       </div>
-
-      <footer>
-        <div className="flex p-8 items-center gap-2">
-          <Logo />
-          <p className="text-sm font-semibold">
-            Built by <span className="underline">Chess</span>.
-          </p>
-        </div>
-      </footer>
     </Fragment>
   )
 }
