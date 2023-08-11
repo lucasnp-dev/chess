@@ -1,15 +1,14 @@
-type MarketingConfig = {
+import { MainNavType } from '@/@types'
+
+export type MarketingConfig = {
   page: {
     title: string
   }
-  mainNav: {
-    title: string
-    href: string
-  }[]
+  menuNav: MainNavType
 }
 
 export const marketingConfig: MarketingConfig = {
-  mainNav: [
+  menuNav: [
     {
       title: 'Features',
       href: '/#features',
