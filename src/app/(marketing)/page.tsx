@@ -23,18 +23,12 @@ export default function App() {
           </p>
           <div className="flex gap-4">
             <Link
-              href={'/login'}
+              href={'/auth/register'}
               className={buttonVariants({ variant: 'default' })}
             >
               Get Started
             </Link>
-            <Link
-              href={'https://github.com/lucasnp-dev/chess'}
-              target="_blank"
-              className={buttonVariants({ variant: 'outline' })}
-            >
-              Github
-            </Link>
+            
           </div>
         </div>
       </Container>

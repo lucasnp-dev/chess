@@ -17,6 +17,7 @@ import { MdEmail } from 'react-icons/md'
 import { Fragment } from 'react'
 import { Button } from '@/components/ui/button'
 import { signIn } from 'next-auth/react'
+import { Separator } from '@/components/ui/separator'
 
 const formLoginSchema = z.object({
   username: z
@@ -29,7 +30,7 @@ const formLoginSchema = z.object({
 
 type FormLoginType = z.infer<typeof formLoginSchema>
 
-export default function FormLogin() {
+export default function FormRegister() {
   const form = useForm<FormLoginType>({
     resolver: zodResolver(formLoginSchema),
   })
@@ -44,7 +45,7 @@ export default function FormLogin() {
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-8"
-          id="login"
+          id="register"
         >
           <FormField
             control={form.control}
@@ -55,7 +56,7 @@ export default function FormLogin() {
                 <FormControl>
                   <Input placeholder="email@example.com" {...field} />
                 </FormControl>
-                <FormDescription>Seu email.</FormDescription>
+                <FormDescription>Insira seu melhor email.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -63,13 +64,24 @@ export default function FormLogin() {
         </form>
       </Form>
       <div className="mt-4 space-y-4">
+      <Button
+          variant="default"
+          className="gap-4 w-full"
+        >
+          Cadastrar-se
+        </Button>
+        <div className='flex justify-center items-center gap-2 box-border overflow-hidden'>
+          <Separator className='box-border'/>
+          <p className="text-sm text-muted-foreground">ou</p>
+          <Separator className='box-border'/>
+        </div>
         <Button
           variant="outline"
           className="gap-4 w-full"
           onClick={() => signIn('google')}
         >
           <FcGoogle />
-          Continue with Google
+          Continue com o Google
         </Button>
       </div>
     </Fragment>

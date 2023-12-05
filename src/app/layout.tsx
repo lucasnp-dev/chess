@@ -6,7 +6,7 @@ import Providers from '@/components/Providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Chess',
+  title: 'Go Quadros - Artistas',
   description: 'An excellent chess opening to start a new project.',
 }
 

@@ -5,7 +5,6 @@ export default function MenuLogo() {
     <div className="pr-8">
       <div className="flex gap-2 items-center">
         <Logo />
-        <p className="font-bold">Chess</p>
       </div>
     </div>
   )
